@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/back.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .header a:hover {
+            color: #007BFF;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            justify-content: space-around; /* Align services in a single row */
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 100px auto; /* Adjusted to leave space for the header */
+            padding: 20px;
+        }
+
+        /* Service Box */
+        .service-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-box img {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+
+        .service-box h3 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .service-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Animation */
+        .service-box {
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .service-box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .service-box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .service-box:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .service-box:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .service-box:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .service-box:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+        /* FadeIn Animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Service 1: 100% Genuine -->
+        <div class="service-box">
+            <img src="images/gen.png" alt="100% Genuine">
+            <h3>100% Genuine</h3>
+            <p>
+                All books listed on our platform are 100% genuine. We ensure that every exchange is authentic, giving you the confidence to trade books with fellow readers without worry.
+            </p>
+        </div>
+
+        <!-- Service 2: 1000++ Books -->
+        <div class="service-box">
+            <img src="images/bbok.png" alt="1000++ Books">
+            <h3>1000++ Books</h3>
+            <p>
+                With over 1000+ books in various categories, we have a vast collection that caters to every type of reader. Find your next great read today!
+            </p>
+        </div>
+
+        <!-- Service 3: Faster Delivery -->
+        <div class="service-box">
+            <img src="images/faster.png" alt="Faster Delivery">
+            <h3>Faster Delivery</h3>
+            <p>
+                We ensure that your books are delivered quickly and safely. No more long waits—get your books delivered to you in record time.
+            </p>
+        </div>
+
+        <!-- Service 4: Great Pricing -->
+        <div class="service-box">
+            <img src="images/price.png" alt="Great Pricing">
+            <h3>Great Pricing</h3>
+            <p>
+                Enjoy competitive prices on all book exchanges. Whether you're buying or selling, our platform ensures affordable options for everyone.
+            </p>
+        </div>
+
+        <!-- Service 5: Seamless Checkout -->
+        <div class="service-box">
+            <img src="images/seam.png" alt="Seamless Checkout">
+            <h3>Seamless Checkout</h3>
+            <p>
+                Experience a hassle-free checkout process. Our platform ensures smooth transactions with multiple secure payment options.
+            </p>
+        </div>
+
+        <!-- Service 6: Easy Returns -->
+        <div class="service-box">
+            <img src="images/return.png" alt="Easy Returns">
+            <h3>Easy Returns</h3>
+            <p>
+                If you’re not satisfied with your exchange, we offer easy returns. Simply return the book, and we’ll make sure you’re happy with your next choice.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/back.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+            background-image: url('images/back.jpg'); /* Use the same background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .header a:hover {
+            color: #007BFF;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            height: 100vh; /* Full screen height */
+            margin-top: 80px; /* To adjust for the fixed header */
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* Set width of the content wrapper */
+        }
+
+        /* Left Side Content */
+        .left-content {
+            flex: 1;
+            padding-left: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Right Side Content */
+        .right-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .right-content h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Floating Message Icon */
+        .message-icon {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007BFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .message-icon:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .message-icon img {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Content Wrapper for Centering -->
+        <div class="content-wrapper">
+            <!-- Left Side Content -->
+            <div class="left-content">
+                <h1>Choose Your Option</h1>
+                <p>Welcome to our Book Exchange Platform. Select one of the options below to begin:</p>
+            </div>
+
+            <!-- Right Side Content with Buttons -->
+            <div class="right-content">
+                <h2>Choose Your Role</h2>
+                <div class="buttons">
+                    <a href="buyer.html" class="button">Buyer</a>
+                    <a href="seller.php" class="button">Seller</a>
+                    <a href="exchange_signup.php" class="button">Exchange Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Message Icon -->
+    <div class="message-icon" onclick="window.location.href='index.php'">
+        <img src="images/comment.png" alt="Message Icon">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/back.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+            background-image: url('images/back.jpg'); /* Use the same background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .header a:hover {
+            color: #007BFF;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            display: flex;
+            justify-content: flex-start; /* Aligns content to the left */
+            align-items: flex-start; /* Aligns content to the top */
+            height: 100vh; /* Full screen height */
+            margin-top: 80px; /* To adjust for the fixed header */
+            padding: 20px;
+            width: 60%; /* Adjusted the width of the contact form */
+            gap: 20px; /* Added gap between form and name list */
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%; /* Adjusted to fill the contact form container */
+            text-align: left; /* Align text to the left */
+        }
+
+        .form-container h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-align: left; /* Align the title to the left */
+        }
+
+        .form-container label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left; /* Align label text to the left */
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            color: #333;
+            text-align: left; /* Align input and textarea text to the left */
+        }
+
+        .form-container input[type="email"] {
+            background-color: #f2f2f2;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Name List Section */
+        .name-list {
+            display: flex;
+            justify-content: flex-start; /* Display items in a row */
+            align-items: center; /* Vertically align items */
+            flex-wrap: wrap; /* Allows the names to wrap onto the next row if needed */
+            padding: 20px;
+            width: 40%; /* Adjusted to take up less space */
+            margin-top: 80px; /* To adjust for the fixed header */
+        }
+
+        .name-list h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+            color: #fff;
+        }
+
+        .name-list p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 100%;
+            color: #fff;
+        }
+
+        .name-list a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .name-list a:hover {
+            color: #007BFF;
+        }
+
+        /* Adjust layout on smaller screens */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form {
+                width: 100%;
+                flex-direction: column;
+                gap: 20px; /* Added gap to avoid tight layout */
+            }
+
+            .name-list {
+                width: 100%;
+                margin-top: 20px;
+                justify-content: center; /* Center the items in a row */
+            }
+
+            .name-list a {
+                margin: 5px 10px; /* Adjust margin for better spacing */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- Left side: Contact Form -->
+    <div class="contact-form">
+        <div class="form-container">
+            <h1>Contact Us</h1>
+            <form action="mailto:vaishnaviellur75@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="from-email">Your Email</label>
+                <input type="email" id="from-email" name="from-email" placeholder="Your Email" required>
+
+                <label for="to-email">To Email</label>
+                <input type="email" id="to-email" name="to-email" value="vaishnaviellur75@gmail.com" readonly>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+    <!-- Right side: Name List Section -->
+    <div class="name-list">
+        <h2>Our Team Members</h2>
+        <p>Click on a name to send an email:</p>
+        <a href="mailto:khatibmuskan601@gmail.com">Muskan Khatib</a>
+        <a href="mailto:padasalgisanjana@gmail.com">Sanjana K Padasalgi</a>
+        <a href="mailto:ankitanilaj174@gmail.com">Ankita Nilaj</a>
+    </div>
+
+</body>
+</html>
